@@ -8,5 +8,5 @@ class SellerAccountViewSet(viewsets.ModelViewSet):
     serializer_class = SellerAccountSerializer
     queryset = SellerAccount.objects.all()
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['id','user_id','first_name', 'last_name', 'business_name', 'business_field']
+    filterset_fields = ['id','user_id','first_name', 'last_name']
 

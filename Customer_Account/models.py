@@ -2,6 +2,7 @@ from django.db import models
 from User.models import CustomUser
 # Create your models here.
 class CustomerAccount(models.Model):
+    national_id = models.CharField(null=True, blank=True, max_length=14,default=None)
     user_id = models.OneToOneField(CustomUser,default= None,on_delete=models.CASCADE,verbose_name="User ID")
     first_name = models.CharField(max_length=100, default=None)
     last_name = models.CharField(max_length=100, default=None)

@@ -1,0 +1,7 @@
+django
+djangorestframework
+dj-database-url
+djangorestframework-simplejwt
+django-filter
+Pillow
+gunicorn

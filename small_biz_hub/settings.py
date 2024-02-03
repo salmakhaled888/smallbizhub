@@ -50,7 +50,9 @@ INSTALLED_APPS = [
     'Cart_Items',
     'Order_Details',
     'Order_Items',
-    'Seller_Shop'
+    'Seller_Shop',
+    'BusinessBankAccount',
+    'ShopCategory'
 
 ]
 
@@ -136,6 +138,8 @@ STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 MEDIA_URL="/Product/Product Images/"
 MEDIA_ROOT=os.path.join(BASE_DIR,"Product/Product Images")
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

@@ -52,7 +52,8 @@ INSTALLED_APPS = [
     'Order_Items',
     'Seller_Shop',
     'BusinessBankAccount',
-    'ShopCategory'
+    'ShopCategory',
+    'BusinessType'
 
 ]
 

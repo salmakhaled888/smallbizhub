@@ -5,7 +5,8 @@ from Seller_Account.models import SellerAccount
 
 class Product(models.Model):
     product_name = models.CharField(max_length=100, default=None)
-    product_image = models.ImageField(upload_to='Product Images')
+    product_image = models.ImageField(upload_to='Product Images',null=True,blank=True)
+    product_video = models.FileField(upload_to='Product Videos',null=True,blank=True)
     product_description = models.TextField(max_length=1000, default=None)
     SKU = models.CharField(max_length=12, default=None)
     category_id = models.ForeignKey(Product_Categories,on_delete=models.CASCADE,verbose_name="Category ID")

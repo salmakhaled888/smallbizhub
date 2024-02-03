@@ -3,6 +3,7 @@ from User.models import CustomUser
 # Create your models here.
 class CustomerAccount(models.Model):
     user_id = models.OneToOneField(CustomUser,default= None,on_delete=models.CASCADE,verbose_name="User ID")
+    profile_pic = models.ImageField(upload_to='Customer Profile Photos',null=True,blank=True)
     first_name = models.CharField(max_length=100, default=None)
     last_name = models.CharField(max_length=100, default=None)
     telephone = models.PositiveIntegerField(default=None)

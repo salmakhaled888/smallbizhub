@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     'django_filters',
     'Customer_Account',
     'Seller_Account',
-    'Seller_Shop',
     "User",
     'User_Address',
     'Product',
@@ -52,7 +51,7 @@ INSTALLED_APPS = [
     'Cart_Items',
     'Order_Details',
     'Order_Items',
-
+    'Seller_Shop'
 
 ]
 

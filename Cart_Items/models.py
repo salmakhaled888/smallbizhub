@@ -1,12 +1,13 @@
 from django.db import models
 from Customer_Account.models import CustomerAccount
 from Product.models import Product
+from User.models import CustomUser
 
 
 class Cart_Items(models.Model):
     totalPrice = 0
     product_id = models.ForeignKey(Product,on_delete=models.CASCADE,verbose_name="Product in cart",null=True)
-    user_id = models.ForeignKey(CustomerAccount, on_delete=models.CASCADE, verbose_name="Customer")
+    users_id = models.ForeignKey(CustomUser, on_delete=models.CASCADE, verbose_name="Customer", null=True)
     quantity = models.PositiveIntegerField(default=None)
     created_at = models.DateField(default=None)
     modified_at = models.DateField(auto_now=True)

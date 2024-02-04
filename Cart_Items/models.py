@@ -5,7 +5,7 @@ from Product.models import Product
 
 class Cart_Items(models.Model):
     totalPrice = 0
-    product_id = models.OneToOneField(Product,on_delete=models.CASCADE,verbose_name="Product in cart")
+    product_id = models.ForeignKey(Product,on_delete=models.CASCADE,verbose_name="Product in cart")
     user_id = models.ForeignKey(CustomerAccount, on_delete=models.CASCADE, verbose_name="Customer")
     quantity = models.PositiveIntegerField(default=None)
     created_at = models.DateField(default=None)

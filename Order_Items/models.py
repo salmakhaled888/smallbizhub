@@ -5,7 +5,7 @@ from Order_Details.models import Order_Details
 
 class Order_Items(models.Model):
     order_id = models.ForeignKey(Order_Details,on_delete=models.CASCADE,verbose_name="Order ID")
-    product_id = models.OneToOneField(Product,on_delete= models.CASCADE,verbose_name="Products")
+    product_id = models.ManyToManyField(Product,verbose_name="Products")
     quantity = models.PositiveIntegerField(default=None)
     created_at = models.DateField()
     modified_at = models.DateField()

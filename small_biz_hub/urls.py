@@ -35,6 +35,7 @@ urlpatterns = [
     path('api/', include('BusinessBankAccount.urls')),
     path('api/', include('ShopCategory.urls')),
     path('api/', include('BusinessType.urls')),
+    path('api/', include('User_IsCustomer.urls')),
     path('api/', include('Login.urls')),
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

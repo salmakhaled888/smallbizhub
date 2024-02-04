@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'Customer_Account',
     'Seller_Account',
     "User",
+    'User_IsCustomer',
     'Product',
     'Product_Category',
     'Product_Rating',

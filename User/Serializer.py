@@ -4,16 +4,14 @@ from . import models
 
 class UserSerializer(serializers.ModelSerializer):
     password=serializers.CharField()
-    is_customer = serializers.BooleanField()
     class Meta:
         model=models.CustomUser
-        fields=['id','email','password','is_customer']
+        fields=['id','email','password']
 
     def create(self, validated_data):
         user=models.CustomUser.objects.create_user(
             email=validated_data['email'],
-            password=validated_data['password'],
-            is_customer=validated_data['is_customer']
+            password=validated_data['password']
         )
         return user
 
